@@ -4,7 +4,7 @@ local Players = game:GetService("Players")
 
 --// Required Modules
 local TrashSystem = require(game.ServerScriptService.Modules.TrashSystem)
-local Shared = require(game.ServerScriptService.Modules.Database) -- assuming your boost tables are here
+local Shared = require(game.ServerScriptService.Modules.Database)
 
 --// Remote Functions
 local GetData = ReplicatedStorage.RemoteFunctions:WaitForChild("GetData")
