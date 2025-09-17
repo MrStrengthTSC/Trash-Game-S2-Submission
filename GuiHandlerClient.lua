@@ -25,7 +25,7 @@ local playerData = GetDataFunction:InvokeServer()
 
 if playerData then
 	maxBottleCapacity = playerData.maxBottles
-	bottleInventory = playerData.bottle_inventory
+	bottleInventory = playerData.bottleInventory
 	coinBalance = playerData.coins
 	recyclePoints = playerData.recyclePoints
 end
@@ -36,7 +36,7 @@ local function updateGUI(data)
 	bottleInventory = data.bottle_inventory or bottleInventory
 	coinBalance = data.coins or coinBalance
 	recyclePoints = data.recyclePoints or recyclePoints
-	maxBottleCapacity = data.maxBottles or maxBottleCapacity
+	maxBottleCapacity = data.maxBottles or maxBottleCapacity 
 
 	local totalBottles = 0
 	for _, count in pairs(bottleInventory) do
@@ -56,6 +56,4 @@ updateGUI({
 	maxBottles = maxBottleCapacity
 })
 
---// Connect Remote Updates
 UpdateInventoryEvent.OnClientEvent:Connect(updateGUI)
-
