@@ -57,3 +57,5 @@ updateGUI({
 })
 
 UpdateInventoryEvent.OnClientEvent:Connect(updateGUI)
+
+
